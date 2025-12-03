@@ -15,7 +15,7 @@ db.sqlite3
 
 # Media and Static files (if served locally and generated)
 # media/
-# static_collected/
+static_collected/
 
 # Environment variables
 .env
