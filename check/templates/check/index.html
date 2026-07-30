@@ -1,0 +1,23 @@
+
+{% if all_names %}
+    <ul>
+    {% for species in all_names %}
+        <li><a href="{% url 'check:edit' species.id %}">{{ species.scientific_main }}</a></li>
+
+        <ul>
+        {% for en in species.english_names.all %}
+            <li>{{ en.commonen}}</li>
+        {% endfor %}
+        </ul>
+
+        <ul>
+        {% for jp in species.japanese_names.all %}
+            <li>{{ jp.commonjp}}</li>
+        {% endfor %}
+        </ul>
+
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No species are available.</p>
+{% endif %}

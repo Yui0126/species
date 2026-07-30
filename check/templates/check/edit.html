@@ -1,0 +1,6 @@
+
+<form action="{% url 'check:update' scientific.id %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="scientific_main" value="{{ scientific.scientific_main}}">
+    <button type="submit">Save</button>
+</form>
